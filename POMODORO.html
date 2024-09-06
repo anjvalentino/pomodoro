@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none; /* Ensure no underline */
+        }
+
+        .button-green {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button-green:hover {
+            background-color: #45a049;
+        }
+
+        .button-orange {
+            background-color: #FFA500; /* Orange color */
+            color: white;
+        }
+
+        .button-orange:hover {
+            background-color: #ff8c00; /* Darker orange color on hover */
+        }
+
+        /* Additional style to center elements */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Pomodoro Timer Section -->
+        <div class="pomodoro">
+            <h2>Pomodoro Timer</h2>
+            <div id="timer">25:00</div>
+            <button id="start" class="button button-green">Start</button>
+            <button id="reset" class="button button-green">Reset</button>
+        </div>
+
+        <!-- To-Do List Section -->
+        <div class="todo">
+            <h2>To-Do List</h2>
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button id="add-task" class="button button-green">Add Task</button>
+            <ul id="task-list"></ul>
+        </div>
+
+        <!-- Link to Music Player Subpage -->
+        <div class="music-link">
+            <a href="music.html" class="button button-orange">Music Player</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

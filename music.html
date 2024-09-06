@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .button-green {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button-green:hover {
+            background-color: #45a049;
+        }
+
+        .button-orange {
+            background-color: #FFA500; /* Orange color */
+            color: white;
+        }
+
+        .button-orange:hover {
+            background-color: #ff8c00; /* Darker orange color on hover */
+        }
+
+        /* Additional style to center elements */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- MP3 Music Player Section -->
+        <div class="music-player">
+            <h2>MP3 Music Player</h2>
+
+            <!-- First Track Button -->
+            <button class="button button-green" onclick="playTrack('audio/Owl City - Fireflies (Lyrics).mp3')">Play Owl City - Fireflies</button>
+            
+            <!-- Second Track Button -->
+            <button class="button button-green" onclick="playTrack('audio/30 Minute Timer Lofi.mp3')">Play 30 Minute Timer Lofi</button>
+            
+            <!-- Third Track Button -->
+            <button class="button button-green" onclick="playTrack('audio/30 Minutes of Smooth Jazz.mp3')">Play 30 Minutes of Smooth Jazz</button>
+
+            <!-- Audio Element -->
+            <audio id="audioPlayer" controls style="margin-top: 20px; width: 100%;">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Back to Main Page Button -->
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="button button-orange">Back to Main Page</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to play the selected track
+        function playTrack(src) {
+            var audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = src;
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
